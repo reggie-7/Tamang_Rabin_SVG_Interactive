@@ -1,0 +1,149 @@
+
+body {
+    font-size: 16px;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.hidden { 
+    display: none; 
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 32px;
+}
+
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    color: beige;
+}
+
+#icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 40px 20px;
+}
+
+#icon-container > div {
+    flex: 0 0 auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+
+
+.fruit-title {
+    font-size: 1.5rem;
+    margin: 15px 0 5px;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#icon-container svg {
+    max-width: 150px;
+    max-height: 150px;
+    transition: all 0.4s ease;
+}
+
+
+#oranges { 
+    transition: all 0.5s ease; 
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+#orange:hover #oranges { 
+    fill: rgba(255, 255, 0, 0.607); 
+}
+
+#orange:hover #oranges { 
+    transform: rotate(360deg); 
+}
+
+#p-fruit {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  /* Trigger wiggle when hovering over peach */
+ #peach:hover #p-fruit {
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  @keyframes wiggle {
+    0%  { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }        
+    
+ /* Triggers floating bounce when hover over grapes */
+#grapes:hover #g-leaves, 
+#grapes:hover #g-grape {
+    animation: floatBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes floatBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Triggers Gentle Swing while hover over mango */
+#mango:hover #mangoo {
+    transform-origin: top center;
+    animation: swing 1.8s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+}
+
+/* Triggers vibrant Pulse while hover over watermelon*/
+#watermelon:hover #w-cover, 
+#watermelon:hover #w-seeds {
+    animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+/* Triggers Jiggle Dance while over Strawberry */
+#strawberry:hover #straw-fruit, 
+#strawberry:hover #straw-leaf {
+    animation: jiggle 0.6s ease-in-out infinite;
+}
+
+@keyframes jiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(1deg); }
+}
+
+ footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.1rem;
+    opacity: 0.8;
+ }
